@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
+  <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+  #marquee-outer {
+    height: 5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  #marquee-inner {
+    animation: marquee 10s linear infinite;
+    position: absolute;
+    width: 100%;
+  }
+  @keyframes marquee {
+    0% {transform: translateX(100%)}
+    100% {transform: translateX(-50%)}
+  }
+  .carousel-caption {
+    opacity: .75;
+    text-shadow: 0 .125rem .25rem black;
+  }
+  </style>
+  {{ if not .Site.IsServer }}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-88343275-6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-88343275-6');
+    </script>
+  {{ end }}
+</head>
+<body>

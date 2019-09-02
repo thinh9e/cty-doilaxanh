@@ -1,0 +1,11 @@
+baseURL = "https://cayxanhdoilaxanh.com/"
+languageCode = "vi-vn"
+title = "Công ty TNHH Đầu tư Đồi Lá Xanh"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+    description = "Công ty TNHH Cây xanh Đồi Lá Xanh chuyên thiết kế thi công trồng cây cảnh quan, môi trường cho nhà máy, khu du lịch trồng cỏ, cây công trình: cỏ lá gừng, cỏ nhung, cung cấp cây giống bàng Đài Loan, giáng hương"
+    email = "greencity.inc2019@gmail.com"
+    phonehome = ["842838497669", "(0283) 849 7669"]
+    phonemobile = ["84919909677", "0919 909 677"]

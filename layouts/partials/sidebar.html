@@ -1,0 +1,17 @@
+<section class="col-sm-3">
+  <!-- List group -->
+  <aside>
+    <div class="list-group list-group-flush font-weight-bold">
+      {{ with .Site.GetPage "dich-vu" }}
+        {{ range .Pages }}
+          <a href="{{ .Permalink }}" class="list-group-item list-group-item-action text-success pb-1">{{ .Title }}</a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </aside>
+  <!-- Contact -->
+  <section class="text-center border border-success rounded-pill font-weight-bold mt-3 sticky-top">
+    <h5 class="text-primary my-2"><b>TƯ VẤN</b></h5>
+    <p class="text-danger mb-2">Hotline: <a href="tel:+{{ index .Site.Params.phonemobile 0 }}" class="text-decoration-none text-danger">{{ index .Site.Params.phonemobile 1 }}</a></p>
+  </section>
+</section>

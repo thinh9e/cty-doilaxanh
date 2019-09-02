@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+  {{ partial "header.html" . }}
+  <main class="container">
+    <!-- Carousel -->
+    {{ partial "carousel.html" . }}
+    <!-- Content -->
+    <div class="row mt-3">
+      <section class="col-sm-9">
+        <!-- Service -->
+        <article class="text-justify mb-3">
+          <h5 class="text-success">{{ upper .Title }}</h5>
+          <hr class="bg-success mt-0">
+          {{ .Content }}
+        </article>
+      </section>
+      {{ partial "sidebar.html" . }}
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+{{ partial "foot.html" . }}

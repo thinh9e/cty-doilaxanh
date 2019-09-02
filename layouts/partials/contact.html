@@ -1,0 +1,7 @@
+<address>
+  <strong class="text-danger">Văn phòng TP. HCM</strong><br>
+  <em>(Giờ hành chính)</em><br>
+  <i class="fas fa-phone-square text-danger mt-2 mr-2"></i><a href="tel:+{{ index .Site.Params.phonehome 0 }}" class="text-decoration-none text-dark">{{ index .Site.Params.phonehome 1 }}</a><br>
+  <i class="fas fa-envelope text-danger mr-2"></i><a href="mailto:{{ .Site.Params.email }}" class="text-dark text-decoration-none">{{ .Site.Params.email }}</a>
+</address>
+<a href="https://www.google.com/maps/search/20%2F14+%C4%90%E1%BB%93ng+Xo%C3%A0i,+Ph%C6%B0%E1%BB%9Dng+13,+Qu%E1%BA%ADn+T%C3%A2n+B%C3%ACnh,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh/@10.8006482,106.6470978,17.5z?hl=vi" target="_blank"><img src="{{ .Site.BaseURL }}img/map.png" class="img-thumbnail" width="825" alt="map"></a>

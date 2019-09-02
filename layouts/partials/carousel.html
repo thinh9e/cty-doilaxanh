@@ -1,0 +1,47 @@
+{{ if .IsHome }}
+  <section id="carouselSlide" class="carousel slide carousel-fade mt-2" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="5000">
+        <img src="{{ .Site.BaseURL }}img/img1-1140x300.jpg" class="d-block rounded w-100" alt="{{ lower .Site.Title }}">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{ .Site.Title }}</h3>
+          <p>Hotline: <a href="tel:+{{ index .Site.Params.phonemobile 0 }}" class="text-decoration-none text-light">{{ index .Site.Params.phonemobile 1 }}</a></p>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="5000">
+        <img src="{{ .Site.BaseURL }}img/img2-1140x300.jpg" class="d-block rounded w-100" alt="{{ lower .Site.Title }}">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{ .Site.Title }}</h3>
+          <p>Hotline: <a href="tel:+{{ index .Site.Params.phonemobile 0 }}" class="text-decoration-none text-light">{{ index .Site.Params.phonemobile 1 }}</a></p>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="5000">
+        <img src="{{ .Site.BaseURL }}img/img3-1140x300.jpeg" class="d-block rounded w-100" alt="{{ lower .Site.Title }}">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{ .Site.Title }}</h3>
+          <p>Hotline: <a href="tel:+{{ index .Site.Params.phonemobile 0 }}" class="text-decoration-none text-light">{{ index .Site.Params.phonemobile 1 }}</a></p>
+        </div>
+      </div>
+    </div>
+    <a href="#carouselSlide" class="carousel-control-prev" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Trước</span>
+    </a>
+    <a href="#carouselSlide" class="carousel-control-next" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Tiếp</span>
+    </a>
+  </section>
+{{ else }}
+  <section id="carouselSlide" class="carousel slide mt-2" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{ .Site.BaseURL }}{{ .Page.Params.banner }}" class="d-block rounded w-100" alt="{{ lower .Page.Title }}">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{ .Site.Title }}</h3>
+          <p>Hotline: <a href="tel:+{{ index .Site.Params.phonemobile 0 }}" class="text-decoration-none text-light">{{ index .Site.Params.phonemobile 1 }}</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

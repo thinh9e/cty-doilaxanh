@@ -1,0 +1,9 @@
+<section class="col-sm-3 mt-3">
+  <a href="{{ .Permalink }}">
+    <img src="{{ .Site.BaseURL }}{{ .Page.Params.poster }}" class="img-fluid rounded" alt="{{ lower .Title }}">
+  </a>
+</section>
+<section class="col-sm-9 mt-3 text-justify">
+  <div><a href="{{ .Permalink }}" class="text-decoration-none text-danger"><strong>{{ upper .Title }}</strong></a></div>
+  <div class="text-info"><em>({{ title .Page.Params.heading }})</em></div>
+</section>

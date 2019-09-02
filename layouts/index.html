@@ -1,0 +1,81 @@
+{{ partial "head.html" . }}
+  {{ partial "header.html" . }}
+  <main class="container">
+    <!-- Carousel -->
+    {{ partial "carousel.html" . }}
+    <!-- Content -->
+    <div class="row mt-3">
+      <section class="col-sm-9">
+        <!-- Introduce -->
+        <article class="text-justify">
+          <h5 class="text-success"><a href="{{ .Site.BaseURL }}gioi-thieu" class="text-decoration-none text-success">GIỚI THIỆU</a></h5>
+          <hr class="bg-success mt-0">
+          <p>Công ty TNHH Đầu tư Đồi Lá Xanh là một đơn vị chuyên cung cấp các Dịch vụ và Giải pháp cây xanh cho Nhà máy, khu công nghiệp, khu dân cư, khu du lịch, biệt thự, nhà hàng. Chúng tôi xin trân trọng gửi lời cám ơn chân thành đến toàn thể quý khách hàng đã quan tâm và sử dụng các sản phẩm, dịch vụ của công ty chúng tôi.</p>
+        </article>
+        <!-- Service -->
+        <article class="text-justify mb-3">
+          <h5><a href="{{ .Site.BaseURL }}dich-vu" class="text-decoration-none text-success">DỊCH VỤ CÂY XANH</a></h5>
+          <hr class="bg-success mt-0 mb-1">
+          <div class="row text-center">
+            {{ with .Site.GetPage "dich-vu" }}
+              {{ range .Pages }}
+                {{ .Render "summary" }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </article>
+        <!-- Provide -->
+        <article class="text-justify mb-3">
+          <h5><a href="{{ .Site.BaseURL }}cung-cap" class="text-decoration-none text-success">CUNG CẤP CÂY XANH</a></h5>
+          <hr class="bg-success mt-0 mb-1">
+          <div class="row text-center">
+            {{ with .Site.GetPage "cung-cap" }}
+              {{ range .Pages }}
+                {{ .Render "summary" }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </article>
+        <!-- Lease -->
+        <article class="text-justify mb-3">
+          <h5 class="text-success"><a href="{{ .Site.BaseURL }}cho-thue" class="text-decoration-none text-success">DỊCH VỤ CHO THUÊ</a></h5>
+          <hr class="bg-success mt-0 mb-1">
+          <div class="row text-center">
+            {{ with .Site.GetPage "cho-thue" }}
+              {{ range .Pages }}
+                {{ .Render "summary" }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </article>
+        <!-- Project -->
+        <article class="text-justify mb-3">
+          <h5 class="text-success"><a href="{{ .Site.BaseURL }}du-an" class="text-decoration-none text-success">DỰ ÁN</a></h5>
+          <hr class="bg-success mt-0 mb-1">
+          <div class="row text-center">
+            {{ with .Site.GetPage "du-an" }}
+              {{ range .Pages }}
+                {{ .Render "summary" }}
+              {{ end }}
+            {{ end }}
+          </div>
+        </article>
+        <!-- Contact -->
+        <article class="text-justify mb-3">
+          <h5 class="text-success"><a href="{{ .Site.BaseURL }}lien-he" class="text-decoration-none text-success">LIÊN HỆ</a></h5>
+          <hr class="bg-success mt-0">
+          {{ partial "contact.html" . }}
+        </article>
+        <!-- Customer -->
+        <div id="marquee-outer">
+          <section id="marquee-inner">
+            <a href="https://emivest.com.vn" class="mr-3"><img src="{{ .Site.BaseURL }}img/cus1.png" height="75" title="Công ty TNHH Emivest Việt Nam" alt="customer"></a>
+            <a href="https://vi-vn.facebook.com/CongTyTNHHHwaseungVina"><img src="{{ .Site.BaseURL }}img/cus2.jpg" height="75" title="Công ty TNHH Hwa Seung Vina" alt="customer"></a>
+          </section>
+        </div>
+      </section>
+      {{ partial "sidebar.html" . }}
+    </div>
+  </main>
+  {{ partial "footer.html" . }}
+{{ partial "foot.html" . }}
