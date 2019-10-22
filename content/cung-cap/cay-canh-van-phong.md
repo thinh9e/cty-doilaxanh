@@ -8,8 +8,8 @@ draft: false
 ---
 
 <div class="row text-center">
-    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img1.jpg" title="" >}}
-    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img2.jpg" title="" >}}
-    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img3.jpg" title="" >}}
-    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img4.jpg" title="" >}}
+    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img1.jpg" title="" id="1" >}}
+    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img2.jpg" title="" id="2" >}}
+    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img3.jpg" title="" id="3" >}}
+    {{< image_34 src="img/cung-cap/cay-canh-van-phong-img4.jpg" title="" id="4" >}}
 </div>
